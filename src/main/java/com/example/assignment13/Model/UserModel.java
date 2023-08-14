@@ -35,7 +35,7 @@ public class UserModel {
 
     @NotEmpty(message = "Email must not be empty")
     @Email(message = "Email must be a valid format")
-    @Column(columnDefinition = "varchar(30) unique not null CHECK(email REGEXP '([a-zA-Z0-9]{6,})(@)([a-zA-Z]{6,})(\.)([a-zA-Z]{2,})')")
+    @Column(columnDefinition = "varchar(30) unique not null CHECK(email REGEXP '([a-zA-Z0-9]{6,})(@)([a-zA-Z]{6,})(\\.)([a-zA-Z]{2,})')")
     private String email;
 
     @NotEmpty(message = "Role must not be empty")
