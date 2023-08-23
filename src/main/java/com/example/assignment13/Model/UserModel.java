@@ -26,7 +26,7 @@ public class UserModel {
 
     @NotEmpty(message = "Username must not be empty")
     @Size(min = 4,message = "Username length must be more than 4")
-    @Column(columnDefinition = "varchar(10) unique not null CHECK(LENGTH(name)>=4)")
+    @Column(columnDefinition = "varchar(10) unique not null CHECK(LENGTH(username)>=4)")
     private String username;
 
     @NotEmpty(message = "Password must not be empty")
